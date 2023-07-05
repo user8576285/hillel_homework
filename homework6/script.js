@@ -1,43 +1,36 @@
-function BiggerNumber(){
-    let a = 659443344554
-    let b = 3484832333
-   if (a < b){
-    console.log (b)
-   } else if (a > b)
-   { console.log (a)}
-   
+const BiggerNumber = (a, b) => {
+  return Math.max(a, b);
+};
+console.log(BiggerNumber(100, 10));
 
-}
+const checkAge = (age) => {
+  if (age <= 18) {
+    return false;
+  } else {
+    return true;
+  }
+};
+console.log(checkAge(20));
+console.log(checkAge(15));
 
-BiggerNumber()
+const stringCut = () => {
+  let str = prompt("Введите строку:");
+  let maxlength = prompt("Введите максимальную длину строки:");
 
-function checkAge(){
-    const age = prompt("Введите возраст")
-    if (age < 18){
-        console.log(false)
-    } else {  console.log(true)}
-  
-}
-checkAge()
+  if (str.length > maxlength) {
+    let dots = "…";
+    str =
+      str.substring(0, maxlength - dots.length) +
+      dots.repeat(str.length - maxlength);
+  }
 
-function stringCut(){
-    let str = prompt("Введите строку:");
-let maxlength = prompt("Введите максимальную длину строки:");
+  console.log(str);
+};
+stringCut();
 
+const checkWord = (string, word) => {
+  return string.includes(word);
+};
 
-if (str.length > maxlength) {
-  let dots = "…";
-  str = str.substring(0, maxlength - dots.length) + dots.repeat(str.length - maxlength);
-}
-
-console.log(str);
-} 
-stringCut()
-
-function checkWord(){
-    const str1 = "eirogvieritrueword"
-    const ifIncludes = str1.includes("word")
-     console.log(ifIncludes)
-   
-}
-checkWord()
+console.log(checkWord("Hello, world!", "world"));
+console.log(checkWord("Hello, world!", "word"));
