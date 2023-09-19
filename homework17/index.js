@@ -37,8 +37,8 @@ const person1 = new Person("Никита","мужской");
 const person2 = new Person("Настя", "женский");
 
 
-const apartment = new Apartment();
 const apartment1 = new Apartment();
+const apartment2 = new Apartment();
 
 
 apartment1.addResident(person1);
