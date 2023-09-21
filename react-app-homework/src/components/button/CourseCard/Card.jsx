@@ -2,43 +2,43 @@ import React from 'react';
 import "./card.css"
 
 
-function CourseCard({ course }) {
+function CourceCard({ props }) {
   return (
-    <div className={`card ${course.isMyCource ? 'my-course' : ''}`}>
+    <div className={`card ${props.isMyCource ? 'my-cource' : ''}`}>
       <div className="image__container">
-        <img src={course.image} alt="" />
-        <div className="level">{course.level}</div>
+        <img src={props.image} alt="" />
+        <div className="level">{props.level}</div>
       </div>
-      <h3 className="card__title">{course.title}</h3>
+      <h3 className="card__title">{props.title}</h3>
 
       <div className="card__info">
         <div className="user">
-          <img src={course.user.avatar} alt={course.user.name} />
-          <p>{course.user.name}</p>
+          <img src={props.user.avatar} alt={props.user.name} />
+          <p>{props.user.name}</p>
         </div>
         <div className="rating">
-          <p>{course.rating}</p>
+          <p>{props.rating}</p>
         </div>
       </div>
-      {course.isMyCource ? (
-        <div className="my-course-info">
-          <progress value={course.finishedModules} max={course.modules}>
-            {((course.finishedModules / course.modules) * 100).toFixed(0)}%
+      {props.isMyCource ? (
+        <div className="my-cource-info">
+          <progress value={props.finishedModules} max={props.modules}>
+            {((props.finishedModules / props.modules) * 100).toFixed(0)}%
           </progress>
           <div className="card__info">
-            <p>{`${course.finishedModules} / ${course.modules} Modules`}</p>
-            <div>{`${((course.duration / 3600) * 100).toFixed(0)} %`}</div>
+            <p>{`${props.finishedModules} / ${props.modules} Modules`}</p>
+            <div>{`${((props.duration / 3600) * 100).toFixed(0)} %`}</div>
           </div>
         </div>
       ) : (
         <div className="card__info">
-          <div>{`${course.students} Student${course.students !== 1 ? 's' : ''}`}</div>
-          <div>{`${course.modules} Modules`}</div>
-          <div>{`${(course.duration / 3600).toFixed(0)}h ${((course.duration % 3600) / 60)}m`}</div>
+          <div>{`${props.students} Student${props.students !== 1 ? 's' : ''}`}</div>
+          <div>{`${props.modules} Modules`}</div>
+          <div>{`${(props.duration / 3600).toFixed(0)}h ${((props.duration % 3600) / 60)}m`}</div>
         </div>
       )}
     </div>
   );
 }
 
-export default CourseCard;
+export default CourceCard;

@@ -55,8 +55,8 @@ function App() {
       <Button text="Нажми на меня ٩(｡•́‿•̀｡)۶" handleClick={}/> */}
       {/* <CourseCard /> */}
       <div className="App">
-        {courses.map((course) => (
-          <CourseCard key={course.id} course={course} />
+        {courses.map((props) => (
+          <CourseCard key={props.id} props={props} />
         ))}
       </div>
 
