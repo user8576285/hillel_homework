@@ -52,7 +52,7 @@ function App() {
       {/* 
       <Button text="Save" handleClick={onSave}></Button>
       <Button text="Cancel" handleClick={onCancel}></Button>
-      <Button text="Нажми на меня ٩(｡•́‿•̀｡)۶" handleClick={lox}/> */}
+      <Button text="Нажми на меня ٩(｡•́‿•̀｡)۶" handleClick={}/> */}
       {/* <CourseCard /> */}
       <div className="App">
         {courses.map((course) => (
