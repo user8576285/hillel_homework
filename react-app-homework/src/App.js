@@ -54,6 +54,8 @@ function App() {
       <Button text="Cancel" handleClick={onCancel}></Button>
       <Button text="Нажми на меня ٩(｡•́‿•̀｡)۶" handleClick={}/> */}
       {/* <CourseCard /> */}
+
+
       <div className="App">
         {courses.map((props) => (
           <CourseCard key={props.id} props={props} />
@@ -67,3 +69,4 @@ function App() {
 
 
 export default App;
+//
