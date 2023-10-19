@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #e9e9e9;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.posts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px 10px;
+  color: #fff;
+  background-color: #323232;
+}
